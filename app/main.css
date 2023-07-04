@@ -42,14 +42,17 @@ body, input, textarea, button {
 dialog {
   color: var(--color-text);
 }
+
+button, .badge {
+  cursor: pointer; 
+  border-radius: var(--border-radius);
+}
 button {
   box-sizing: content-box;
   height: 48px;
   font-weight: var(--weight-bold);
   border: 1px solid var(--color-outline);
-  border-radius: var(--border-radius);
   background-color: var(--color-background);
-  cursor: pointer; 
   padding: 0 calc(var(--padding)*2);
 }
 button.primary {
@@ -57,6 +60,16 @@ button.primary {
   background-color: var(--color-primary);
   border: none;
 }
+.badge {
+  padding: 0 var(--1);
+  border: 1px solid var(--color-background);
+  background: var(--color-highlight);
+  line-height: var(--body-line-height);
+}
+.badge:focus {
+  border: 1px solid var(--color-outline);
+}
+
 p {
   margin-block-start: var(--padding);
   margin-block-end: var(--padding);
@@ -72,11 +85,16 @@ p {
   }
 }
 
-dialog {
+.popover {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
   outline: none;
   border: 1px solid var(--color-outline);
   border-radius: var(--border-radius);
+}
+.popover > div {
+  border-radius: var(--border-radius);
+}
+dialog {
   padding: 0;
 }
 dialog::backdrop {
@@ -114,7 +132,11 @@ main {
   border-bottom: 1px solid var(--color-outline-secondary);
 }
 .sidebar-top > .logo {
-  color: var(--color-icon-secondary);
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-icon-secondary);
+  -webkit-mask: url(/logo.svg) no-repeat center;
+  mask: url(/logo.svg) no-repeat center;
 }
 .sidebar-main {
   padding: var(--padding);
