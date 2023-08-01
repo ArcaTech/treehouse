@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 :root {
   --sublime-black: #2B2C26;
   --sublime-dark-gray: #3F3F3B;
@@ -8,7 +10,7 @@
   --sublime-yellow: #E9E076;
   --sublime-purple: #B889FF;
   --sublime-orange: #FDA100;
-  --sublime-pink: #FB277F;
+  --sublime-pink: #CF1C67;
   
   --font: "Roboto Mono", monospace;
 
